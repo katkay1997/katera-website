@@ -1,12 +1,17 @@
 {
     "type": "Config",
-    "favicon": "/images/favicon.svg",
+    "favicon": "/images/kat-favicon.png",
     "header": {
         "type": "Header",
         "headerVariant": "variant-c",
         "isSticky": false,
         "title": "Katera",
-        "isTitleVisible": true,
+        "isTitleVisible": false,
+        "logo": {
+            "type": "ImageBlock",
+            "url": "/images/kat-favicon.png",
+            "altText": "Katera"
+        },
         "primaryLinks": [
         { "type": "Link", "label": "Info", "url": "/info" },
         { "type": "Link", "label": "Projects", "url": "/projects" },
