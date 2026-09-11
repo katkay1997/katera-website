@@ -29,7 +29,7 @@ function pickColor(): string {
 function makeStar(): Star {
     // Bias toward small sizes, with only a small tail of larger, brighter stars.
     const r = Math.random();
-    const size = 1.8 + Math.pow(r, 2.2) * 3.6; // ~1.8px - 5.4px, mean ~2.9px
+    const size = 2.7 + Math.pow(r, 2.2) * 5.4; // ~2.7px - 8.1px, mean ~4.4px (1.5x prior size)
     const minOpacity = 0.25 + Math.random() * 0.2; // 0.25 - 0.45
     const maxOpacity = 0.85 + Math.random() * 0.15; // 0.85 - 1.0
     return {
