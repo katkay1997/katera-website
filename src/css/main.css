@@ -17,6 +17,18 @@
 .starfield-star {
     position: absolute;
     border-radius: 50%;
+    will-change: opacity;
+}
+
+/*
+ * The twinkle animation is applied via this separate class, added on a
+ * requestAnimationFrame tick after the stars first paint (see
+ * SpaceBackground.tsx). Mobile WebKit has a known bug where CSS animations
+ * don't reliably start on elements that are inserted into the DOM already
+ * carrying the animation; toggling the animation on via a class change on an
+ * already-painted element avoids it.
+ */
+.starfield-star--active {
     animation-name: starfield-twinkle;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
@@ -37,7 +49,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .starfield-star {
+    .starfield-star--active {
         animation: none;
     }
 }
