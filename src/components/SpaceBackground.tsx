@@ -27,21 +27,22 @@ function pickColor(): string {
 }
 
 function makeStar(): Star {
-    // Bias toward small sizes, with only a small tail of larger stars.
-    const size = 1 + Math.pow(Math.random(), 2.2) * 2.2;
-    const minOpacity = 0.35 + Math.random() * 0.3; // 0.35 - 0.65
-    const maxOpacity = 0.7 + Math.random() * 0.1; // 0.7 - 0.8
+    // Bias toward small sizes, with only a small tail of larger, brighter stars.
+    const r = Math.random();
+    const size = 1.8 + Math.pow(r, 2.2) * 3.6; // ~1.8px - 5.4px, mean ~2.9px
+    const minOpacity = 0.25 + Math.random() * 0.2; // 0.25 - 0.45
+    const maxOpacity = 0.85 + Math.random() * 0.15; // 0.85 - 1.0
     return {
         x: Math.random() * 100,
         y: Math.random() * 100,
         size,
         color: pickColor(),
-        glow: size > 2.4,
+        glow: r > 0.82, // top ~18% of stars, by the same percentile used for size
         minOpacity,
         maxOpacity,
         staticOpacity: (minOpacity + maxOpacity) / 2,
-        duration: 3 + Math.random() * 5, // 3s - 8s
-        delay: -(Math.random() * 8) // negative delay staggers phase on mount
+        duration: 2.5 + Math.random() * 3.5, // 2.5s - 6s
+        delay: -(Math.random() * 6) // negative delay staggers phase on mount
     };
 }
 
