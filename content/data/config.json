@@ -33,6 +33,13 @@
                 "label": "GitHub",
                 "url": "https://github.com/katkay1997",
                 "icon": "github"
+            },
+            {
+                "type": "Social",
+                "altText": "Instagram",
+                "label": "Instagram",
+                "url": "https://www.instagram.com/katera_kanvas/",
+                "icon": "instagram"
             }
         ],
         "styles": {
