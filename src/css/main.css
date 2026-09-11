@@ -4,6 +4,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Starfield background */
+.starfield {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    background: #000;
+    pointer-events: none;
+}
+
+.starfield-star {
+    position: absolute;
+    border-radius: 50%;
+    animation-name: starfield-twinkle;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.starfield-star--glow {
+    filter: blur(0.2px);
+}
+
+@keyframes starfield-twinkle {
+    0%,
+    100% {
+        opacity: var(--star-min-opacity, 0.4);
+    }
+    50% {
+        opacity: var(--star-max-opacity, 0.8);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .starfield-star {
+        animation: none;
+    }
+}
+
 @layer base {
     body {
         @apply flex flex-col min-h-screen antialiased;
