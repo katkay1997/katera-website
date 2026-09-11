@@ -14,10 +14,10 @@
         },
         "primaryLinks": [
         { "type": "Link", "label": "Info", "url": "/info" },
-        { "type": "Link", "label": "Projects", "url": "/projects" },
         { "type": "Link", "label": "🍽️ Swipe & Bite", "url": "https://swipe-and-bite-app.lovable.app/", "target": "_blank" },
         { "type": "Link", "label": "🚇 MTA Tracker", "url": "https://mta-real-time.lovable.app/", "target": "_blank" },
-        { "type": "Link", "label": "🎨 Art Portfolio", "url": "https://katcanvas.lovable.app/", "target": "_blank" }
+        { "type": "Link", "label": "🎨 Art Portfolio", "url": "https://katcanvas.lovable.app/", "target": "_blank" },
+        { "type": "Link", "label": "Contact", "url": "mailto:kateradmckay@gmail.com" }
         ],
         "socialLinks": [
             {
